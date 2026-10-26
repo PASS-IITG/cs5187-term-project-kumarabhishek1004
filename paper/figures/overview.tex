@@ -1,0 +1,23 @@
+%% Figure: overview of the tool. Steps left to right, loop dashed.
+%% Grayscale-safe (black lines, black!6 fill), \scriptsize text, numbered
+%% steps matching the "Step N" subsections.
+\begin{tikzpicture}[
+    x=1cm, y=1cm, font=\scriptsize,
+    box/.style={draw, rounded corners=2pt, align=center, inner sep=2pt,
+                minimum height=9mm, text width=15mm, fill=white},
+    outbox/.style={draw, align=left, inner sep=2pt, fill=black!6,
+                text width=20mm, font=\tiny},
+    flow/.style={-{Stealth[length=1.6mm]}, line width=0.5pt},
+    back/.style={-{Stealth[length=1.6mm]}, line width=0.5pt, dash pattern=on 2pt off 1.5pt},
+  ]
+  \node[box, text width=10mm] (in) at (0,0) {input};
+  \node[box] (s1) at (1.8,0) {\textbf{1} step one};
+  \node[box] (s2) at (3.8,0) {\textbf{2} step two};
+  \node[box] (s3) at (5.8,0) {\textbf{3} step three};
+  \node[outbox] (o) at (3.8,-1.6) {output one\\output two};
+  \draw[flow] (in) -- (s1);
+  \draw[flow] (s1) -- (s2);
+  \draw[flow] (s2) -- (s3);
+  \draw[flow] (s3.south) |- (o.east);
+  \draw[back] (s3.north) -- ++(0,0.35) -| node[pos=0.25, above] {repeat} (s2.north);
+\end{tikzpicture}

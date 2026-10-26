@@ -1,0 +1,44 @@
+\section{Introduction}
+\label{sec:intro}
+%% Paragraph plan (each paragraph = one job; keep to this order):
+%%  P1  Concrete scenario the reader knows: "Suppose you want to ...".
+%%      State what existing tools need or do, with citations.
+%%  P2  The first/known problem and who already works on it (cite).
+%%      End with where they stop: "These tools stop when ...".
+%%  P3  OUR problem, in plain words: "We focus on a second problem that
+%%      starts where they stop: ...". Why it is silent/dangerous.
+%%  P4  A real example with exact numbers, pointing to a figure
+%%      (Figure~\ref{fig:motivating}). Then "This is not a single case." + count.
+%%  P5  Prior work on the closest idea and its precise gap
+%%      ("However, they need ...", "Their method depends on ...").
+%%  P6  "We bring/We present \tool ..." + numbered steps (enumerate), each
+%%      step one sentence, each pointing to its section. Then list outputs.
+%%  P7  First results with numbers, and one lesson learned.
+%%  Contributions (itemize), each item ending in (Section~\ref{...}).
+
+\todo{P1: scenario.}
+
+\focus{\textbf{Motivating example.} Give one \emph{real} case (a bug report,
+  a CVE, a failing test, a slow build, a measured number) that shows the
+  problem is real and worth solving. Point to Figure~\ref{fig:motivating},
+  use exact numbers, then add one sentence proving it is not a one-off
+  (``This is not a single case.'' + a count). This is graded: no toy or
+  imaginary example.}
+
+\paragraph{Contributions.}
+\begin{itemize}
+  \item We define \todo{concept} (Section~\ref{sec:problem}).
+  \item We present \tool, which \todo{what} (Section~\ref{sec:approach}).
+  \item We evaluate \tool on \todo{n} \todo{subjects} (Section~\ref{sec:eval}).
+  \item We release the tool and all data (Section~\ref{sec:data}).
+\end{itemize}
+
+\begin{figure}[t]
+\begin{lstlisting}[numbers=none,escapechar=@]
+// the real code / input that shows the problem, trimmed with ...
+\end{lstlisting}
+\caption{\textcolor{red}{[Motivating example --- graded]} A real case of the
+  problem. \todo{The caption states the lesson, with the exact number, so a
+  reader who reads only captions gets it.}}
+\label{fig:motivating}
+\end{figure}

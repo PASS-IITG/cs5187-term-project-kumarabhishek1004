@@ -1,0 +1,75 @@
+%% FSE (CS-5187 Term Project) research paper. Requirements from the CFP (https://conf.researchr.org/home/fse-2026, checked 2026-09-30):
+%%   * \documentclass[acmsmall,screen,review,anonymous]{acmart}; single column
+%%   * 12 pages of text and figures + references limit \todo{check}
+%%   * double-anonymous: no names, no identifying URLs, third-person
+%%     self-citation, no acknowledgments at submission
+%%   * "Data Availability" section after the Conclusion (not counted)
+%%   * disclose AI tools; fabricated citations = desk reject
+%%   * deadline: TODO (see course page) AoE, TODO
+%% Used for e.g. FSE, ISSTA, OOPSLA/PACMPL, TOSEM.
+\documentclass[acmsmall,screen,review,anonymous]{acmart}
+
+\input{macros}
+
+\setcopyright{none}
+\acmConference[FSE (CS-5187 Term Project)]{ACM International Conference on the Foundations of Software Engineering (Format Template)}{2026}{IIT Guwahati}
+\acmYear{2026}
+\citestyle{acmauthoryear}
+
+\begin{document}
+
+\title[Short Hook]{Short Hook: Plain Description of What Your Project Does and For Whom}
+%% Title pattern: "Short Hook: Plain Description of What and For Whom".
+%% Alternative titles (keep 2-3 here until submission):
+%%   "..."
+
+\author{Anonymous Author(s)}
+\affiliation{\institution{Anonymous Institution}\country{Anonymous Country}}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+%% CCS concepts: pick the ones that fit YOUR project at https://dl.acm.org/ccs
+%% (500 = main, 300 = secondary). This template fits any software-engineering
+%% topic -- static analysis, dynamic analysis/testing, empirical studies,
+%% program repair, tools, human factors, etc. -- so replace the placeholder
+%% below with the concept for your own work. A few common top-level ids:
+%%   Software and its engineering~Software testing and debugging
+%%   Software and its engineering~Automated static analysis
+%%   Software and its engineering~Dynamic analysis
+%%   Software and its engineering~Software creation and management
+%%   General and reference~Empirical studies
+\begin{CCSXML}
+<ccs2012>
+  <concept>
+    <concept_id>10011007.10011074</concept_id>
+    <concept_desc>Software and its engineering</concept_desc>
+    <concept_significance>500</concept_significance>
+  </concept>
+</ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Software and its engineering}
+
+\keywords{\todo{5--8 keywords for your topic (e.g. static analysis, testing,
+  fuzzing, empirical study, program repair, refactoring, build systems)}}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/background}
+%\input{sections/pilot}          % optional: "A First Look" before the tool
+\input{sections/problem}
+\input{sections/approach}
+%\input{sections/implementation} % optional
+\input{sections/evaluation}
+\input{sections/discussion}
+\input{sections/threats}         % or merge into discussion to save space
+\input{sections/related}
+\input{sections/conclusion}
+\input{sections/data}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

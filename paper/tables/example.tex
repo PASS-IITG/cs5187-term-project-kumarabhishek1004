@@ -1,0 +1,18 @@
+%% Table style: caption ABOVE, caption explains every column and unit,
+%% booktabs rules only (no vertical lines), numbers right-aligned,
+%% thousands as 12{,}563, percentages with one decimal, a total row after
+%% \midrule. \num{} (blue) for anything not yet measured by the final tool.
+\begin{table}[t]
+  \caption{\todo{What the table shows.} \emph{Column}: meaning and unit.}
+  \label{tab:example}
+  \footnotesize
+  \begin{tabular}{lrr}
+    \toprule
+    Subject & Lines & Share \\
+    \midrule
+    example & 12{,}563 & 55.5\% \\
+    \midrule
+    total   & \num{--} & \\
+    \bottomrule
+  \end{tabular}
+\end{table}
