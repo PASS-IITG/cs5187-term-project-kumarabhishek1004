@@ -1,0 +1,159 @@
+{
+  "paths": {
+    "workDir": "work",
+    "logDir": "work/logs",
+    "libxml2Dir": "work/libxml2",
+    "libxml2RepoUrl": "https://gitlab.gnome.org/GNOME/libxml2.git",
+    "databasePath": "work/state.sqlite"
+  },
+  "toolchain": {
+    "cCompiler": "clang",
+    "cxxCompiler": "clang++",
+    "llvmProfdata": "llvm-profdata",
+    "llvmCov": "llvm-cov",
+    "cmake": "cmake",
+    "git": "git",
+    "buildJobs": 8
+  },
+  "libxml2": {
+    "enabledVariants": [
+      "asanUbsan",
+      "coverage"
+    ],
+    "cmakeExtraOptions": [
+      "-DLIBXML2_WITH_ICONV=OFF",
+      "-DLIBXML2_WITH_LZMA=OFF",
+      "-DLIBXML2_WITH_ZLIB=OFF",
+      "-DLIBXML2_WITH_PYTHON=OFF",
+      "-DLIBXML2_WITH_TESTS=OFF",
+      "-DLIBXML2_WITH_PROGRAMS=OFF"
+    ]
+  },
+  "llm": {
+    "requestTimeoutSeconds": 180,
+    "maxRetries": 5,
+    "baseBackoffSeconds": 4,
+    "maxBackoffSeconds": 90,
+    "rateLimitCooldownSeconds": 120,
+    "minSecondsBetweenCalls": 0.5,
+    "defaultMaxTokens": 4096,
+    "providers": {
+      "groqA": {
+        "apiType": "openai",
+        "apiKeyEnv": "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",
+        "apiKey": "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",
+        "model": "openai/gpt-oss-120b",
+        "baseUrl": "https://api.groq.com/openai/v1",
+        "maxTokensField": "max_completion_tokens"
+      },
+      "groqB": {
+        "apiType": "openai",
+        "apiKeyEnv": "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",
+        "apiKey": "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",
+        "model": "openai/gpt-oss-20b",
+        "baseUrl": "https://api.groq.com/openai/v1",
+        "maxTokensField": "max_completion_tokens"
+      }
+    },
+    "roles": {
+      "generator": [
+        "groqA",
+        "groqB"
+      ],
+      "extender": [
+        "groqB",
+        "groqA"
+      ],
+      "auditor": [
+        "groqA",
+        "groqB"
+      ],
+      "analyst": [
+        "groqB",
+        "groqA"
+      ],
+      "judge": [
+        "groqA",
+        "groqB"
+      ]
+    },
+    "maxTokensCap": 0
+  },
+  "voting": {
+    "minVoters": 3,
+    "minApprovalRatio": 0.5
+  },
+  "discovery": {
+    "enabledSources": [
+      "apiGap",
+      "pastFix",
+      "commitStream",
+      "staticAnalyzer"
+    ],
+    "apiGapTopFunctions": 40,
+    "pastFixCommitLimit": 25,
+    "pastFixGrepPattern": "CVE|overflow|use-after-free|use after free|double free|leak|out-of-bounds|out of bounds|uninitialized|null deref|integer",
+    "pastFixMaxDiffChars": 9000,
+    "pastFixMaxGrepMatches": 60,
+    "commitStreamDays": 120,
+    "commitStreamMaxCommits": 40,
+    "staticAnalyzerMaxWarnings": 30
+  },
+  "audit": {
+    "maxHypothesesPerRun": 30,
+    "maxPocAttempts": 3,
+    "pocRunTimeoutSeconds": 30,
+    "pocCompileTimeoutSeconds": 120,
+    "maxCallersInContext": 5,
+    "maxFunctionSourceChars": 9000
+  },
+  "harness": {
+    "useExtender": true,
+    "maxCompileRepairAttempts": 3,
+    "smokeRunSeconds": 30,
+    "minExecsPerSecond": 50,
+    "improvementRounds": 2,
+    "improvementRoundSeconds": 300,
+    "targetFunctionCoverageGoal": 0.6,
+    "componentsPerRun": 6,
+    "maxApisPerComponent": 25,
+    "maxUncoveredSnippetChars": 6000
+  },
+  "fuzzing": {
+    "workersPerHarness": 4,
+    "chunkSeconds": 900,
+    "plateauSeconds": 3600,
+    "totalBudgetHoursPerHarness": 0,
+    "timeoutPerInputSeconds": 10,
+    "rssLimitMb": 2048,
+    "maxInputLength": 4096,
+    "explorationRate": 0.2,
+    "baselineCoresTotal": 8,
+    "baselineChunkSeconds": 600
+  },
+  "differential": {
+    "categories": [
+      "entities",
+      "namespaces",
+      "encodings",
+      "dtdInternalSubset",
+      "characterReferences",
+      "attributesAndWhitespace",
+      "cdataCommentsPis",
+      "deepNestingAndLongNames"
+    ],
+    "inputsPerCategory": 12,
+    "pushChunkSizes": [
+      1,
+      7
+    ],
+    "oracleTimeoutSeconds": 15
+  },
+  "distribution": {
+    "machineIndex": 0,
+    "machineCount": 1
+  },
+  "logging": {
+    "consoleLevel": "INFO"
+  }
+}

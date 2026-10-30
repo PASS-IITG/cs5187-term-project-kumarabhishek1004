@@ -1,0 +1,10 @@
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Large generated archives
+libxml2Fuzz.zip
+
+# Work directories
+**/work/
