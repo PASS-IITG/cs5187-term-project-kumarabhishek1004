@@ -1,0 +1,46 @@
+nohup: ignoring input
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 639862497
+INFO: Loaded 2 modules   (196965 inline 8-bit counters): 196924 [0x762b578b94c0, 0x762b578e95fc), 41 [0x568029c88040, 0x568029c88069), 
+INFO: Loaded 2 PC tables (196965 PCs): 196924 [0x762b578e9600,0x762b57bea9c0), 41 [0x568029c88070,0x568029c88300), 
+INFO:       17 files found in /home/tarandeep-kaur/libxml2-fuzz-experiment/corpus/regexp
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 17 min: 1b max: 150b total: 518b rss: 46Mb
+#18	INITED cov: 1331 ft: 1367 corp: 15/509b exec/s: 0 rss: 48Mb
+#22986	REDUCE cov: 1331 ft: 1367 corp: 15/507b lim: 374 exec/s: 22986 rss: 136Mb L: 11/150 MS: 3 ChangeBit-EraseBytes-InsertByte-
+#65536	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 797 exec/s: 21845 rss: 293Mb
+#131072	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 1441 exec/s: 26214 rss: 479Mb
+#262144	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 2744 exec/s: 29127 rss: 481Mb
+#524288	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 4096 exec/s: 30840 rss: 482Mb
+#1048576	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 4096 exec/s: 32768 rss: 482Mb
+#2097152	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 4096 exec/s: 32263 rss: 482Mb
+#4194304	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 4096 exec/s: 31300 rss: 483Mb
+#8388608	pulse  cov: 1331 ft: 1367 corp: 15/507b lim: 4096 exec/s: 30954 rss: 484Mb
+#8706931	REDUCE cov: 1331 ft: 1367 corp: 15/503b lim: 4096 exec/s: 30985 rss: 484Mb L: 57/150 MS: 5 CMP-EraseBytes-ChangeByte-InsertByte-InsertByte- DE: "\000\000\000\000\000\000\000\344"-
+#8707892	REDUCE cov: 1331 ft: 1367 corp: 15/501b lim: 4096 exec/s: 30988 rss: 484Mb L: 55/150 MS: 1 EraseBytes-
+#8714978	REDUCE cov: 1331 ft: 1367 corp: 15/500b lim: 4096 exec/s: 31014 rss: 484Mb L: 54/150 MS: 1 EraseBytes-
+#8719824	REDUCE cov: 1331 ft: 1367 corp: 15/496b lim: 4096 exec/s: 31031 rss: 484Mb L: 50/150 MS: 1 EraseBytes-
+#8724836	REDUCE cov: 1331 ft: 1367 corp: 15/495b lim: 4096 exec/s: 31049 rss: 484Mb L: 49/150 MS: 2 ChangeASCIIInt-EraseBytes-
+#8751831	REDUCE cov: 1331 ft: 1367 corp: 15/493b lim: 4096 exec/s: 31034 rss: 484Mb L: 47/150 MS: 1 EraseBytes-
+#12800883	REDUCE cov: 1331 ft: 1367 corp: 15/492b lim: 4096 exec/s: 31685 rss: 487Mb L: 46/150 MS: 4 ShuffleBytes-CopyPart-ChangeByte-EraseBytes-
+#12968636	REDUCE cov: 1331 ft: 1367 corp: 15/491b lim: 4096 exec/s: 31708 rss: 487Mb L: 45/150 MS: 2 ChangeBit-EraseBytes-
+#13031957	REDUCE cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 31707 rss: 487Mb L: 43/150 MS: 5 ShuffleBytes-CrossOver-CrossOver-InsertByte-EraseBytes-
+#16777216	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 32078 rss: 487Mb
+#33554432	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 32672 rss: 487Mb
+#67108864	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 32816 rss: 488Mb
+#134217728	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 32728 rss: 488Mb
+#268435456	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 32486 rss: 488Mb
+#536870912	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 32178 rss: 488Mb
+#1073741824	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 31847 rss: 488Mb
+#2147483648	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 31507 rss: 488Mb
+#4294967296	pulse  cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 31216 rss: 489Mb
+#4493027898	DONE   cov: 1331 ft: 1367 corp: 15/489b lim: 4096 exec/s: 31201 rss: 489Mb
+###### Recommended dictionary. ######
+"\000\000\000\000\000\000\000\344" # Uses: 343002766
+###### End of recommended dictionary. ######
+Done 4493027898 runs in 144001 second(s)
+stat::number_of_executed_units: 4493027898
+stat::average_exec_per_sec:     31201
+stat::new_units_added:          10
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              489

@@ -1,0 +1,11 @@
+Target: libxml2 2.15.4
+Harness: fuzz_regexp_overflow.c (unchanged)
+Instrumentation: libFuzzer coverage + ASan + UBSan
+Duration: 30 seconds
+Executions: 1,045,829
+Average executions/sec: 33,736
+Final coverage: 1,331
+Feature count: 1,367
+Corpus retained: 15
+New units added: 19
+Crashes: 0
